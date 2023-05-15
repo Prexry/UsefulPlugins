@@ -1,0 +1,13 @@
+name: UsefulPlugins
+main: com.ffierce.usefulplugins.UsefulPlugins
+version: 1.0
+commands:
+  install:
+    description: Installs a plugin by name
+    usage: /<command> <plugin_name>
+  plist:
+    description: Shows all plugins you can install
+    usage: /<command>
+  pinfo:
+    description: Gives a description of what the plugin does
+    usage: /<command> <plugin_name>
