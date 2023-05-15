@@ -1,6 +1,6 @@
 # UsefulPlugins
-- What does this plugin do?
-This plugin allows you to install popular or/and useful plugins within one plugin.
+What does this plugin do?
+- This plugin allows you to install popular or/and useful plugins within one plugin.
 
 ## Commands
 - /help UsefulPlugins (The help command.)
