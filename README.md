@@ -9,7 +9,7 @@ What does this plugin do?
 - /install <plugin_name> (Install the mentioned plugin.)
 
 ## Plugins
-Currently this contains the following plugins:
+This currently contains the following plugins:
 - EssentialsX
 - EssentialsXChat
 - EssentialsXDiscord
