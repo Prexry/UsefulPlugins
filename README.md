@@ -5,8 +5,8 @@ What does this plugin do?
 ## Commands
 - /help UsefulPlugins (The help command.)
 - /plist (List all the plugins you can download.)
-- /pinfo <plugin_name> (Give a description of the mentioned plugin.)
-- /install <plugin_name> (Install the mentioned plugin.)
+- /pinfo `<plugin_name>` (Give a description of the mentioned plugin.)
+- /install `<plugin_name>` (Install the mentioned plugin.)
 
 ## Plugins
 This currently contains the following plugins:
