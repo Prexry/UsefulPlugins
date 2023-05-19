@@ -32,6 +32,7 @@ public class InstallCommandExecutor implements CommandExecutor {
         plugins.put("LuckPerms", "https://github.com/FFierce/UsefulPlugins/blob/main/plugins/LuckPerms-Bukkit-5.4.79.jar?raw=true");
         plugins.put("TAB", "https://github.com/FFierce/UsefulPlugins/blob/main/plugins/TAB v3.3.2.jar?raw=true");
         plugins.put("Vault", "https://github.com/FFierce/UsefulPlugins/blob/main/plugins/Vault.jar?raw=true");
+        plugins.put("WorldEdit", "https://github.com/FFierce/UsefulPlugins/blob/main/plugins/worldedit-bukkit-7.2.14.jar?raw=true");
     }
 
     @Override
@@ -62,21 +63,19 @@ public class InstallCommandExecutor implements CommandExecutor {
         return true;
     }
 
-    private void downloadPlugin(String url, String fileName) throws IOException {
-        URL pluginUrl = new URL(url);
-        ReadableByteChannel rbc = Channels.newChannel(pluginUrl.openStream());
-        Path pluginPath = Paths.get(plugin.getDataFolder().getParentFile().getAbsolutePath(), fileName);
-        try (BufferedInputStream in = new BufferedInputStream(pluginUrl.openStream());
-             FileOutputStream fileOutputStream = new FileOutputStream(String.valueOf(pluginPath))) {
-            byte dataBuffer[] = new byte[1024];
-            int bytesRead;
-            while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
-                fileOutputStream.write(dataBuffer, 0, bytesRead);
-            }
-        } catch (IOException e) {
-            // handle exception
-            e.printStackTrace();
+private void downloadPlugin(String url, String fileName) throws IOException {
+    URL pluginUrl = new URL(url);
+    Path pluginPath = Paths.get(plugin.getDataFolder().getParentFile().getAbsolutePath(), fileName);
+    try (BufferedInputStream in = new BufferedInputStream(pluginUrl.openStream());
+         FileOutputStream fileOutputStream = new FileOutputStream(String.valueOf(pluginPath))) {
+        byte dataBuffer[] = new byte[1024];
+        int bytesRead;
+        while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
+            fileOutputStream.write(dataBuffer, 0, bytesRead);
         }
+    } catch (IOException e) {
+        // handle exception
+        e.printStackTrace();
     }
 }
-
+}
