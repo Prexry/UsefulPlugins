@@ -15,34 +15,38 @@ public class PluginInfoCommandExecutor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("pinfo")) {
             if (args.length > 0) {
-                String pluginName = args[0].toLowerCase();
-                switch (pluginName) {
-                    case "essentialsx":
-                        sender.sendMessage("EssentialsX provides the core functionality you'd expect from any Minecraft server kit, such as warp signs, spawn and home commands, and more.");
-                        break;
-                    case "essentialsxchat":
-                        sender.sendMessage("EssentialsX Chat is a fun and unique part of EssentialsX that allows you to customize the chat formatting on your server.");
-                        break;
-                    case "essentialsspawn":
-                        sender.sendMessage("EssentialsX Spawn is a simple plugin that allows players to spawn back to your server's spawn point.");
-                        break;
-                    case "essentialsdiscord":
-                        sender.sendMessage("EssentialsX Discord is a bridge between Minecraft and Discord, allowing you to send messages from Minecraft to Discord and vice versa.");
-                        break;
+                String pluginName = args[0];
+                switch(pluginName.toLowerCase()){
                     case "vault":
                         sender.sendMessage("Vault is a permissions, chat, & economy API to give plugins easy hooks into these systems without needing to hook or depend on each individual plugin themselves.");
                         break;
                     case "luckperms":
-                        sender.sendMessage("LuckPerms is an advanced permissions plugin that allows you to manage permissions for your Minecraft server.");
+                        sender.sendMessage("LuckPerms is a permissions plugin that includes extensive features, allowing for a high degree of configurability and customization.");
                         break;
                     case "tab":
-                        sender.sendMessage("TAB is a plugin that helps you customize your server's player list.");
+                        sender.sendMessage("TAB is a feature-filled plugin that offers customizable player list, header/footer/clock in tab list and more.");
                         break;
                     case "chestcommands":
-                        sender.sendMessage("ChestCommands is a plugin that allows you to create custom GUI windows that execute commands.");
+                        sender.sendMessage("ChestCommands is a plugin that lets you create interactive menus.");
+                        break;
+                    case "essentialsx":
+                        sender.sendMessage("EssentialsX provides several useful tools and features for servers, including player kits, teleports, spawn setting, and more.");
+                        break;
+                    case "essentialsxchat":
+                        sender.sendMessage("EssentialsX Chat is a feature-rich chat formatting plugin for EssentialsX.");
+                        break;
+                    case "essentialsxdiscord":
+                        sender.sendMessage("EssentialsX Discord is a bridge between your server and Discord, synchronizing chat between both platforms.");
+                        break;
+                    case "essentialsxspawn":
+                        sender.sendMessage("EssentialsX Spawn allows you to set and control spawn points in your server.");
+                        break;
+                    case "worldedit":
+                        sender.sendMessage("WorldEdit is an in-game map editor with over 100 functions that makes building and fixing really fast in game.");
                         break;
                     default:
-                        sender.sendMessage("That plugin is not recognized.");
+                        sender.sendMessage("Plugin not found.");
+                        break;
                 }
             } else {
                 sender.sendMessage("Please provide a plugin name.");
