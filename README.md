@@ -18,6 +18,7 @@ This currently contains the following plugins:
 - LuckPerms
 - TAB
 - Vault
+- WorldEdit
 
 ## Suggestions
 You can suggest more plugins if you wish to do so.
